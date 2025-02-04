@@ -9,7 +9,6 @@ import javax.sql.rowset.serial.SerialBlob;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
 import maciej.develop.movieshelf.model.Movie;
 import maciej.develop.movieshelf.repository.MovieRepository;
@@ -20,15 +19,15 @@ public class MovieService {
     @Autowired
     private MovieRepository movieRepository;
 
-    public Movie addMovie(String title, String overview, String date, MultipartFile file)
+    public Movie addMovie(String title, String overview, String date, byte[] file)
             throws SQLException, IOException {
         Movie m = new Movie();
 
         m.setTitle(title);
         m.setOverview(overview);
         m.setReleaseDate(LocalDate.parse(date));
-        if (!file.isEmpty()) {
-            Blob blob = new SerialBlob(file.getBytes());
+        if (file != null) {
+            Blob blob = new SerialBlob(file);
             m.setPoster(blob);
         }
 

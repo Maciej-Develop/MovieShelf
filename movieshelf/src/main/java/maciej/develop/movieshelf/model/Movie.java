@@ -3,6 +3,7 @@ package maciej.develop.movieshelf.model;
 import java.sql.Blob;
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +25,7 @@ public class Movie {
 
     private String title;
 
+    @Column(columnDefinition = "TEXT")
     private String overview;
 
     private LocalDate releaseDate;
