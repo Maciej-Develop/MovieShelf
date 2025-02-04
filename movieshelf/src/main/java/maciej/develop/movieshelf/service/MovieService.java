@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.Blob;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Collection;
 
 import javax.sql.rowset.serial.SerialBlob;
 
@@ -18,6 +19,10 @@ public class MovieService {
 
     @Autowired
     private MovieRepository movieRepository;
+
+    public Iterable<Movie> getAllMovies() {
+        return movieRepository.findAll();
+    }
 
     public Movie addMovie(String title, String overview, String date, byte[] file)
             throws SQLException, IOException {
