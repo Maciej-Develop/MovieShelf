@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.sql.Blob;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.Collection;
 
 import javax.sql.rowset.serial.SerialBlob;
 

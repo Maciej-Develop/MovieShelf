@@ -3,6 +3,8 @@ package maciej.develop.movieshelf.model;
 import java.sql.Blob;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,6 +33,7 @@ public class Movie {
     private LocalDate releaseDate;
 
     @Lob
+    @JsonIgnore
     private Blob poster;
 
 }
