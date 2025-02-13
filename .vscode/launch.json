@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-MovieshelfApplication<movieshelf>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "maciej.develop.movieshelf.MovieshelfApplication",
+      "projectName": "movieshelf",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
