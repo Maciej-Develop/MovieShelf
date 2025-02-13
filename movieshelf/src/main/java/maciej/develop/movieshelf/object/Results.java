@@ -1,4 +1,4 @@
-package maciej.develop.movieshelf.tmdb;
+package maciej.develop.movieshelf.object;
 
 import java.util.List;
 

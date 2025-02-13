@@ -5,10 +5,8 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-import lombok.extern.slf4j.Slf4j;
-import maciej.develop.movieshelf.tmdb.Results;
+import maciej.develop.movieshelf.object.Results;
 
-@Slf4j
 @Service
 public class TmdbService {
 
@@ -25,9 +23,9 @@ public class TmdbService {
                 .build();
     }
 
-    public Results discover() {
+    public Results discover(Integer page) {
         return restClient.get()
-                .uri("/discover/movie")
+                .uri("/discover/movie?page={page}", page)
                 .retrieve()
                 .body(new ParameterizedTypeReference<Results>() {
                 });
