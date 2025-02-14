@@ -7,10 +7,12 @@ import maciej.develop.movieshelf.object.Results;
 import maciej.develop.movieshelf.service.TmdbService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class TmdbController {
 
     @Autowired
