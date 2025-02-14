@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <main className='main-content'>
+      <main>
         <Routes>
           <Route path='/' element={ <Home />}/>
         </Routes>
