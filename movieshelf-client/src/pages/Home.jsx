@@ -25,7 +25,7 @@ function Home() {
         }, []);
 
     return <div className="home">
-        <div className="movie-grid">
+        <div className="row row-cols-1 row-cols-md-5 gap-4 justify-content-center">
             {movies.map((movie) => (
                 <MovieCard movie={movie} key={movie.id}/>
             ))}
