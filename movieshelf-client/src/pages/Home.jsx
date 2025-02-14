@@ -14,7 +14,7 @@ function Home() {
             try {
                 const discoverMovies = await getDiscoverMovies(page)
                 if (discoverMovies == null) {
-                    throw "error"
+                    throw "no movies"
                 }   
                 setMovies((prevMovies) => {
                     let newMovies = discoverMovies.filter(
@@ -53,4 +53,4 @@ function Home() {
     </div>
 }
 
-export default Home
+export default Home;
