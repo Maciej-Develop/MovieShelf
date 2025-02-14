@@ -1,6 +1,7 @@
 package maciej.develop.movieshelf.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import maciej.develop.movieshelf.object.Results;
@@ -19,8 +20,8 @@ public class TmdbController {
     private TmdbService service;
 
     @GetMapping("/movies")
-    public Results getMovies() {
-        return service.discover(1);
+    public Results getMovies(@RequestParam Integer page) {
+        return service.discover(page);
     }
 
 }
