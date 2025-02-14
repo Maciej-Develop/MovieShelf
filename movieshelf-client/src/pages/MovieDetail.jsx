@@ -28,7 +28,9 @@ function MovieDetail() {
     },[])
 
     return <div>
-        <h1>{id}</h1>
+        {movie && <div> 
+            <h1>{movie.title}</h1>
+            </div>}
         {error && <div className="alert alert-danger">{error}</div>}
         {loading && <div><p className="mt-4">Loading ...</p></div>}
     </div>
