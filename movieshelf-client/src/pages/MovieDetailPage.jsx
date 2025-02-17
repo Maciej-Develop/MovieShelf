@@ -30,8 +30,8 @@ function MovieDetailPage() {
 
     return <div>
         {movie != null && <MovieDetail movie={movie}/>}
-        {error && <div className="alert alert-danger">{error}</div>}
-        {loading && <div><p className="mt-4">Loading ...</p></div>}
+        {error && <div>{error}</div>}
+        {loading && <div><p>Loading ...</p></div>}
     </div>
 }
 

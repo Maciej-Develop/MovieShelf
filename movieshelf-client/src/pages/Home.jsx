@@ -39,17 +39,17 @@ function Home() {
         setLoading(true);
     }
 
-    return <div className="home">
-        <div className="row row-cols-1 row-cols-md-5 gap-4 justify-content-center">
+    return <div>
+        <div>
             {movies.map((movie) => (
                 <MovieCard movie={movie} key={movie.id}/>
             ))}
         </div>
-        {loading && <div><p className="mt-4">Loading ...</p></div>}
+        {loading && <div><p>Loading ...</p></div>}
         {!loading && !error && <div>
-                <button className="btn btn-primary mt-4" onClick={handleLoad}>Load More</button>
+                <button onClick={handleLoad}>Load More</button>
             </div>}
-        {error && <div className="alert alert-danger">{error}</div>}
+        {error && <div>{error}</div>}
     </div>
 }
 
