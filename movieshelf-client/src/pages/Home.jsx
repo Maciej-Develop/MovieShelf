@@ -46,7 +46,7 @@ function Home() {
             ))}
         </div>
         {loading && <div><p className="mt-4">Loading ...</p></div>}
-        {!loading && <div>
+        {!loading && !error && <div>
                 <button className="btn btn-primary mt-4" onClick={handleLoad}>Load More</button>
             </div>}
         {error && <div className="alert alert-danger">{error}</div>}
