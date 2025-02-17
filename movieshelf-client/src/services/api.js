@@ -8,8 +8,7 @@ export const getDiscoverMovies = async (page) => {
 }
 
 export const getMovieDetail = async (id) => {
-    // const response = await fetch(`${BASE_URL}/api/movie/${id}`);
-    const response = await fetch(`${BASE_URL}/api/test`);
+    const response = await fetch(`${BASE_URL}/api/movie/${id}`);
     const data = await response.json();
     return data;
 }

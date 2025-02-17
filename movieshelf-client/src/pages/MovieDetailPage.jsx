@@ -1,8 +1,9 @@
 import { useState,useEffect, use } from "react";
 import { useParams } from "react-router-dom";
+import MovieDetail from "../components/MovieDetail";
 import { getMovieDetail } from "../services/api";
 
-function MovieDetail() {
+function MovieDetailPage() {
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
     const [error, setError] = useState(null);
@@ -28,12 +29,10 @@ function MovieDetail() {
     },[])
 
     return <div>
-        {movie && <div> 
-            <h1>{movie.title}</h1>
-            </div>}
+        {movie != null && <MovieDetail movie={movie}/>}
         {error && <div className="alert alert-danger">{error}</div>}
         {loading && <div><p className="mt-4">Loading ...</p></div>}
     </div>
 }
 
-export default MovieDetail;
+export default MovieDetailPage;

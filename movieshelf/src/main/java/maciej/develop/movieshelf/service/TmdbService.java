@@ -5,7 +5,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-import maciej.develop.movieshelf.object.MovieShort;
+import maciej.develop.movieshelf.object.MovieDetail;
 import maciej.develop.movieshelf.object.Results;
 
 @Service
@@ -32,11 +32,11 @@ public class TmdbService {
                 });
     }
 
-    public MovieShort getMovie(Integer id) {
+    public MovieDetail getMovie(Integer id) {
         return restClient.get()
                 .uri("/movie/{id}", id)
                 .retrieve()
-                .body(new ParameterizedTypeReference<MovieShort>() {
+                .body(new ParameterizedTypeReference<MovieDetail>() {
                 });
     }
 }

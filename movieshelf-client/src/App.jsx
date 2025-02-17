@@ -1,7 +1,7 @@
 import './App.css';
 import {Routes, Route} from "react-router-dom";
 import Home from './pages/Home';
-import MovieDetail from './pages/MovieDetail';
+import MovieDetailPage from './pages/MovieDetailPage';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={ <Home />}/>
-          <Route path='/movie/:id' element={<MovieDetail/>}></Route>
+          <Route path='/movie/:id' element={<MovieDetailPage/>}></Route>
         </Routes>
       </main>
     </>
