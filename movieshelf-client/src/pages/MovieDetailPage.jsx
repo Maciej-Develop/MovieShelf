@@ -31,7 +31,7 @@ function MovieDetailPage() {
     return <div>
         {movie != null && <MovieDetail movie={movie}/>}
         {error && <div>{error}</div>}
-        {loading && <div><p>Loading ...</p></div>}
+        {loading && <div className="d-flex justify-content-center"><div className="spinner-border" role="status"></div></div>}
     </div>
 }
 

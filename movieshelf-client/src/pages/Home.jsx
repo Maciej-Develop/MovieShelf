@@ -46,7 +46,7 @@ function Home() {
             </div>
         ))}
     </div>
-    {loading && <div className="d-flex justify-content-center"><p>Loading ...</p></div>}
+    {loading && <div className="d-flex justify-content-center"><div className="spinner-border" role="status"></div></div>}
     {!loading && !error && <div className="d-flex justify-content-center">
             <button className="btn btn-primary" onClick={handleLoad}>Load More</button>
         </div>}
