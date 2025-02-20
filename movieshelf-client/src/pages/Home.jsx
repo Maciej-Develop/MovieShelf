@@ -25,7 +25,6 @@ function Home() {
             } catch (err) {
                 console.log(err);
                 setError("Failed to load movies.")
-                setPage(page - 1)
             }
             finally{
                 setLoading(false)
@@ -51,7 +50,7 @@ function Home() {
     {!loading && !error && <div className="d-flex justify-content-center">
             <button className="btn btn-primary" onClick={handleLoad}>Load More</button>
         </div>}
-    {error && <div className="d-flex justify-content-center">{error}</div>}
+    {error && <div className="d-flex justify-content-center alert alert-danger">{error}</div>}
     </>
 }
 

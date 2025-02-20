@@ -1,49 +1,8 @@
-:root {
---clr-light-a0: #ffffff;
-
-/** Dark theme primary colors */
---clr-primary-a0: #0008ff;
---clr-primary-a10: #502fff;
---clr-primary-a20: #724bff;
---clr-primary-a30: #8d64ff;
---clr-primary-a40: #a47eff;
---clr-primary-a50: #b997ff;
-
-/** Dark theme surface colors */
---clr-surface-a0: #121212;
---clr-surface-a10: #282828;
---clr-surface-a20: #3f3f3f;
---clr-surface-a30: #575757;
---clr-surface-a40: #717171;
---clr-surface-a50: #8b8b8b;
-}
-
-.main {
-    color: var(--clr-light-a0);
-    background: var(--clr-surface-a0);
-}
-
-.navbar {
-    color: var(--clr-light-a0);
-    background: var(--clr-surface-a10);
-}
-
 .card {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    background: var(--clr-surface-a10);
-    color: var(--clr-primary-a30);
 }
   
 .card:hover {
-    transform: scale(1.05); /* Légère animation au survol */
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Ombre plus forte */
-}
-  
-.btn-primary {
-    background: var(--clr-primary-a20);
-    color: var(--clr-light-a0);
-}
-
-.btn-primary:hover{
-    background: var(--clr-primary-a10);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px #000000; 
 }
