@@ -9,7 +9,7 @@ import './App.css';
 function App() {
 
   return (
-    <div className="main">
+    <div>
       <NavBar />
       <main className="container py-5">
         <Routes>
