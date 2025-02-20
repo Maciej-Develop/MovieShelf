@@ -9,12 +9,12 @@ function MovieDetail({movie}) {
     return <>
     <div>
       <div className="row">
-        <div className="col-3 border">
+        <div className="col-3">
           <img className="img-fluid" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
           <h5>{movie.tagline}</h5>
           <p><strong>Score:</strong> <span className={`badge ${getBadgeClass(movie.vote_average)}`}>{movie.vote_average.toFixed(1)}</span> ({movie.vote_count} votes)</p>
         </div>
-        <div className="col border">
+        <div className="col">
           <div>
             <h1>{movie.title}</h1>
             <p><strong>Overview:</strong></p>
