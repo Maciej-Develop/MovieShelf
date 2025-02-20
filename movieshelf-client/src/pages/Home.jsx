@@ -39,18 +39,20 @@ function Home() {
         setLoading(true);
     }
 
-    return <div>
-        <div>
-            {movies.map((movie) => (
+    return <> 
+    <div className="row justify-content-center">
+        {movies.map((movie) => (
+            <div className="col-md-3 mb-4">
                 <MovieCard movie={movie} key={movie.id}/>
-            ))}
-        </div>
-        {loading && <div><p>Loading ...</p></div>}
-        {!loading && !error && <div>
-                <button onClick={handleLoad}>Load More</button>
-            </div>}
-        {error && <div>{error}</div>}
+            </div>
+        ))}
     </div>
+    {loading && <div className="d-flex justify-content-center"><p>Loading ...</p></div>}
+    {!loading && !error && <div className="d-flex justify-content-center">
+            <button className="btn btn-primary" onClick={handleLoad}>Load More</button>
+        </div>}
+    {error && <div className="d-flex justify-content-center">{error}</div>}
+    </>
 }
 
 export default Home;
