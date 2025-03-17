@@ -49,7 +49,7 @@ public class SecurityConfig {
                 .sessionManagement(
                         sessionManagement -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/api/**").permitAll()
+                        .requestMatchers("/api/**", "/auth/**").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(authJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
