@@ -6,7 +6,7 @@ This is a web page that let's an user discover, browse and manage his "list" of 
 
 **Frontend** : React, Bootstrap
 
-**Backend** : Spring Boot, JPA, RestClient
+**Backend** : Spring Boot, JPA, RestClient, Spring Security with JWT Token
 
 **DB** : MySQL
 
@@ -15,3 +15,4 @@ This is a web page that let's an user discover, browse and manage his "list" of 
 ## Features
 -  Discover Movies : On the main page, the users can browse movies.
 -  Search Movies : Users can look up the movies they are interested in.
+-  Create an account
